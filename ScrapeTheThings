@@ -18,7 +18,7 @@ containers = page_soup.findAll("dive",{"class":"item-container"})
 filename = "newEggGraphics.csv"
 f = open(filename, "a")
 
-headers = "Brand, Product_Name, Shipping_Cost\n"
+headers = "brand, product_name, shipping_cost\n"
 
 f.write(headers)
 
@@ -37,6 +37,6 @@ for container in containers:
 	print("Product_Name: " + product_name)
 	print("Shipping_Cost: " + shipping)
 
-	f.write(Brand + ", " Product_Name.replace(",", "|") + ", " Shipping_Cost + "\n")
+	f.write(brand + ", " product_name.replace(",", "|") + ", " shipping_cost + "\n")
 
 f.close()
